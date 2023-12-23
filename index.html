@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/bookmark.png" type="image/x-icon">
+        <title>My holiday Remainder</title>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Triangles&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <div class="content" id="bookmark">
+            
+            <div class="container p-5 flex-column d-flex align-content-center justify-content-center">
+                <div class="row ">
+                    <h1 class="position-relative pb-5">
+                        <span>M</span><span>y</span><span> </span>
+                        <span>A</span><span>n</span><span>i</span><span>m</span><span>e</span>
+                        <span> </span><span>f</span><span>o</span><span>r</span>
+                        <span> </span><span>t</span><span>h</span><span>i</span><span>s</span>
+                        <span>
+                        </span><span>w</span><span>e</span><span>e</span><span>k</span><span>e</span><span>n</span><span>d</span>
+                    </h1>
+                </div>
+                <div class="row pt-3 border-top">
+                    <form id="addActivity" class="needs-validation" novalidate>
+                        <div class="input_col">
+                            <legend class="d-flex justify-content-center align-items-center text-white pb-5">
+                                Drop Your Anime Here
+                            </legend>
+                            <label for="animeName" class="pb-2 fw-semibold"><i
+                                    class="fa-solid fa-book-bookmark pe-2"></i>Anime Name</label>
+                            <input type="text" name="animeName" id="animeName" class="form-control mb-3 bg-light pe-4"
+                                placeholder="Enter the anime name">
+                            <label for="animeURL" class="pb-2 fw-semibold">
+                                <i class="fa-solid fa-link pe-2"></i>Anime URL</label>
+                            <input type="text" name="animeURL" id="animeURL" class="form-control mb-3"
+                                placeholder="Enter the anime URL">
+                            <div class="button d-grid gap-2 col-md-3 mx-auto pt-5 pb-5">
+                                <button type="button" id="add_btn" class="btn d-block btn-danger btn-lg"
+                                    onclick="addData()">Add</button>
+                                <button type="button" id="update_btn" class="btn d-none btn-warning btn-lg"
+                                    onclick="lastUpdate()">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="table_pre" class="row table-responsive mx-auto pt-2">
+                        <div class=" col-md-4">
+                            <label for="rowsPerPage">Rows Per Page:</label>
+                            <div class="selection justify-content-end col-md-4">
+                                <select id="rowsPerPage" class="form-select form-select-sm "
+                                    onchange="updateRowsPerPage()">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search_field col-md-8">
+                            <label for="search"></label>
+                            <input type="text" name="search" id="search" class=" form-control mb-3 bg-light pe-4"
+                                oninput="searchFunc(this.value)" placeholder="Search for anime name">
+                        </div>
+                        <table class=" table table-hover  text-white text-center">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Index</th>
+                                    <th scope="col">Anime Name</th>
+                                    <th scope="col">URL</th>
+                                    <th scope="col">View</th>
+                                    <th scope="col">Update</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody" class="table-group-divider">
+
+                            </tbody>
+                        </table>
+                        <div id="paginationControls" class="pb-3">
+                            <button id="prevButton" class="btn btn-secondary">Previous</button>
+                            <p id="pageInfo" class="d-inline"></p>
+                            <button id="nextButton" class="btn btn-secondary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,211 @@
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+
+body {
+    background-image: url('../img/studio-ghibli.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+label,
+i {
+    color: beige;
+}
+
+/* section */
+.content {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content h1 {
+    font-size: 3em;
+    font: bold 5.5vw/1.6 'Signika', sans-serif;
+    user-select: none;
+    text-align: center;
+}
+
+h1 span {
+    display: inline-block;
+    animation: float .2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    33% {
+        transform: translateY(-1px) rotate(-2deg);
+    }
+
+    66% {
+        transform: translateY(1px) rotate(2deg);
+    }
+}
+
+body:hover span {
+    animation: bounce .6s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(3deg) scale(1.1);
+    }
+}
+
+span:nth-child(4n) {
+    color: hsl(50, 75%, 55%);
+    text-shadow: 1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%);
+}
+
+span:nth-child(4n-1) {
+    color: hsl(135, 35%, 55%);
+    text-shadow: 1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%);
+}
+
+span:nth-child(4n-2) {
+    color: hsl(155, 35%, 60%);
+    text-shadow: 1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%);
+}
+
+span:nth-child(4n-3) {
+    color: hsl(30, 65%, 60%);
+    text-shadow: 1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%);
+}
+
+h1 span:nth-child(2) {
+    animation-delay: .05s;
+}
+
+h1 span:nth-child(3) {
+    animation-delay: .1s;
+}
+
+h1 span:nth-child(4) {
+    animation-delay: .15s;
+}
+
+h1 span:nth-child(5) {
+    animation-delay: .2s;
+}
+
+h1 span:nth-child(6) {
+    animation-delay: .25s;
+}
+
+h1 span:nth-child(7) {
+    animation-delay: .3s;
+}
+
+h1 span:nth-child(8) {
+    animation-delay: .35s;
+}
+
+h1 span:nth-child(9) {
+    animation-delay: .4s;
+}
+
+h1 span:nth-child(10) {
+    animation-delay: .45s;
+}
+
+h1 span:nth-child(11) {
+    animation-delay: .5s;
+}
+
+h1 span:nth-child(12) {
+    animation-delay: .55s;
+}
+
+h1 span:nth-child(13) {
+    animation-delay: .6s;
+}
+
+h1 span:nth-child(14) {
+    animation-delay: .65s;
+}
+
+h1 span:nth-child(15) {
+    animation-delay: .7s;
+}
+
+h1 span:nth-child(16) {
+    animation-delay: .75s;
+}
+
+h1 span:nth-child(17) {
+    animation-delay: .8s;
+}
+
+h1 span:nth-child(18) {
+    animation-delay: .85s;
+}
+
+h1 span:nth-child(19) {
+    animation-delay: .9s;
+}
+
+h1 span:nth-child(20) {
+    animation-delay: .95s;
+}
+
+h1 span:nth-child(21) {
+    animation-delay: 1s;
+}
+
+h1 span:nth-child(22) {
+    animation-delay: 1.05s;
+}
+
+h1 span:nth-child(23) {
+    animation-delay: 1.1s;
+}
+
+h1 span:nth-child(24) {
+    animation-delay: 1.15s;
+}
+
+h1 span:nth-child(25) {
+    animation-delay: 1.2s;
+}
+
+h1 span:nth-child(26) {
+    animation-delay: 1.25s;
+}
+
+/* table */
+legend {
+    background: -webkit-linear-gradient(rgb(201, 22, 255), rgb(199, 21, 21), rgb(204, 242, 50), rgb(22, 123, 255));
+    font-size: 50px;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#table_pre {
+    background-color: rgba(204, 255, 254, 0.3);
+    border-radius: 30px;
+}
+
+#pageInfo {
+    color: aliceblue;
+
+}
