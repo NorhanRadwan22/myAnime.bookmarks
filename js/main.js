@@ -82,7 +82,7 @@ function addData() {
 function truncateURL(url) {
     var maxLength = 20;
     //teranary operator
-    return url.length > maxLength ? URL.substring(0, maxLength) + '...' : url;
+    return url.length > maxLength ? url.substring(0, maxLength) + '...' : url;
 }
 function display(arr, page, rowsPerPage) {
     var startIndex = (page - 1) * rowsPerPage;
