@@ -79,19 +79,25 @@ function addData() {
             }
         }
 }
-
+function truncateURL(url) {
+    var maxLength = 20;
+    //teranary operator
+    return url.length > maxLength ? URL.substring(0, maxLength) + '...' : url;
+}
 function display(arr, page, rowsPerPage) {
     var startIndex = (page - 1) * rowsPerPage;
     var endIndex = startIndex + rowsPerPage;
     var paginatedArr = arr.slice(startIndex, endIndex);
+    
 
     var box = "";
     for (var i = 0; i < paginatedArr.length; i++) {
+        var truncatedURL = truncateURL(paginatedArr[i].animeURL);
         box +=
             `<tr scope="row">
                 <td>${startIndex + i + 1}</td>
                 <td>${paginatedArr[i].animeName}</td>
-                <td>${paginatedArr[i].animeURL}</td>
+                <td>${truncatedURL}</td>
                 <td><button type="button" class="btn btn-success" onclick="openAnimelink(${i})"><i class="fa-solid fa-link"></i></i></button></td>
                 <td><button type="button" class="btn btn-warning" onclick="updateData(${i})"><i class="fa-solid fa-pen-to-square"></i></i></button></td>
                 <td><button type="button" class="btn btn-danger" onclick="deleteAnime(${i})"><i class="fa-solid fa-trash"></i></button></td>
@@ -144,7 +150,7 @@ function lastUpdate() {
     update_btn.classList.replace("d-block", "d-none");
 }
 function openAnimelink(index) {
-    var url = 'https://'+animelist[index].animeURL;
+    var url = animelist[index].animeURL;
     window.open(url,'_blank')
 }
 
